@@ -13,6 +13,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.nio.file.LinkOption;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class QualificationServiceImpl implements QualificationService {
@@ -30,10 +34,12 @@ public class QualificationServiceImpl implements QualificationService {
 
     @Override
     @Transactional(readOnly = true)
-    public Page<QualificationDTO> findByUserId(Pageable pageable, String userId) {
-        if (qualificationRepository.existsByHotelId(userId)) {
-            Page<Qualification> qualifications = qualificationRepository.findByUserId(pageable, userId);
-            return qualifications.map(QualificationDTO::toDTO);
+    public List<QualificationDTO> findByUserId(String userId) {
+        if (qualificationRepository.existsByUserId(userId)) {
+            List<Qualification> qualifications = qualificationRepository.findByUserId(userId);
+            return qualifications.stream()
+                    .map(QualificationDTO::toDTO)
+                    .collect(Collectors.toList());
         } else {
             throw new UserNotFoundException(USER_NOT_FOUND);
         }
@@ -41,10 +47,12 @@ public class QualificationServiceImpl implements QualificationService {
 
     @Override
     @Transactional(readOnly = true)
-    public Page<QualificationDTO> findByHotelId(Pageable pageable, String hotelId) {
+    public List<QualificationDTO> findByHotelId(String hotelId) {
         if (qualificationRepository.existsByHotelId(hotelId)) {
-            Page<Qualification> qualifications = qualificationRepository.findByHotelId(pageable, hotelId);
-            return qualifications.map(QualificationDTO::toDTO);
+            List<Qualification> qualifications = qualificationRepository.findByHotelId(hotelId);
+            return qualifications.stream()
+                    .map(QualificationDTO::toDTO)
+                    .collect(Collectors.toList());
         } else {
             throw new HotelNotFoundException(HOTEL_NOT_FOUND);
         }
