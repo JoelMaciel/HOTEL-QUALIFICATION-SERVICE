@@ -5,11 +5,13 @@ import com.joelmaciel.qualificationservice.api.dtos.response.QualificationDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 public interface QualificationService {
 
     QualificationDTO save(QualificationRequestDTO qualificationRequestDTO);
 
     Page<QualificationDTO> findAll(Pageable pageable);
-    Page<QualificationDTO> findByUserId(Pageable pageable, String userId);
-    Page<QualificationDTO> findByHotelId(Pageable pageable, String hotelId);
+    List<QualificationDTO> findByUserId(String userId);
+    List<QualificationDTO> findByHotelId(String hotelId);
 }

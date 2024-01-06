@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -28,13 +29,13 @@ public class QualificationController {
     }
 
     @GetMapping("/users/{userId}")
-    public Page<QualificationDTO> getQualificationUserId(@PathVariable String userId, Pageable pageable) {
-        return qualificationService.findByUserId(pageable, userId);
+    public List<QualificationDTO> getQualificationUserId(@PathVariable String userId) {
+        return qualificationService.findByUserId(userId);
     }
 
     @GetMapping("/hotels/{hotelId}")
-    public Page<QualificationDTO> getQualificationHotelId(@PathVariable String hotelId, Pageable pageable) {
-        return qualificationService.findByHotelId(pageable, hotelId);
+    public List<QualificationDTO> getQualificationHotelId(@PathVariable String hotelId) {
+        return qualificationService.findByHotelId(hotelId);
     }
 
     @PostMapping
