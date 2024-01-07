@@ -11,9 +11,8 @@
 
 
 ## Technology used :
--  JAVA ---  SPRING BOOT ---  DOCKER 
--  Resilience4j --- CircuitBreaker --- Rate Limiter --- Redis
--  CI/CD --- JUNIT5 ---  MOCKITO --- JACOCO
+-  JAVA ---  SPRING BOOT ---  DOCKER
+   RESILIENCE4J --- CIRCUIT-BREAKER --- RATE LIMITER --- REDIS-  CI/CD --- JUNIT5 ---  MOCKITO --- JACOCO
 -  API GATEWAY ---  SERVICE DISCOVERY (EUREKA)
 -  OPEN FEIGN --- OPEN API (SWAGGER)
 -  KEYCLOAK --- SPRING DATA MONGODB --- MONGODB
@@ -27,7 +26,8 @@
 ### DATABASE QUALIFICATIONS MONGODB
 ![Captura de tela de 2024-01-06 11-17-54](https://github.com/JoelMaciel/KAF-USER-SERVICE/assets/77079093/aba58fb3-4e03-4873-94a2-c188874e9560)
 
-### EUREKA DISCOVERY
-![Captura de tela de 2024-01-06 13-25-35](https://github.com/JoelMaciel/KAF-USER-SERVICE/assets/77079093/9d2a41f9-9492-4159-b031-376cf110aac4)
+### Eureka Discovery
+![Captura de tela de 2024-01-07 10-54-07](https://github.com/JoelMaciel/kaf-config-repo/assets/77079093/5c6a9a05-d278-4d94-b8bd-573af6303e05)
+
 ### FIND QUALIFICATION BY ID
 ![Captura de tela de 2024-01-06 11-18-18](https://github.com/JoelMaciel/KAF-USER-SERVICE/assets/77079093/4f1dbe8d-dbf8-4773-8600-589dc7356d6f)
