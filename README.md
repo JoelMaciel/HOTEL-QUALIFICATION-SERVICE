@@ -28,7 +28,6 @@
 ![Captura de tela de 2024-01-06 11-17-54](https://github.com/JoelMaciel/KAF-USER-SERVICE/assets/77079093/aba58fb3-4e03-4873-94a2-c188874e9560)
 
 ### Eureka Discovery
-![Captura de tela de 2024-01-07 10-54-07](https://github.com/JoelMaciel/kaf-config-repo/assets/77079093/5c6a9a05-d278-4d94-b8bd-573af6303e05)
-
+![Captura de tela de 2024-01-08 17-06-34](https://github.com/JoelMaciel/KAF-AUTHENTICATION-SERVICE/assets/77079093/59454fe7-93d7-4826-bd00-062bb24e9bfb)
 ### FIND QUALIFICATION BY ID
 ![Captura de tela de 2024-01-06 11-18-18](https://github.com/JoelMaciel/KAF-USER-SERVICE/assets/77079093/4f1dbe8d-dbf8-4773-8600-589dc7356d6f)
