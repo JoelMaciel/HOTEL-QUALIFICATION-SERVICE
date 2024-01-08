@@ -5,7 +5,8 @@ spring:
   application:
     name: QUALIFICATION-SERVICE
   config:
-    import: optional:configserver:http://localhost:8085
+    enable: false
+    import: optional:configserver:instead
   data:
     mongodb:
       uri: mongodb://localhost:27017
